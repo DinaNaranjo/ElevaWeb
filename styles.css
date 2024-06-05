@@ -1,0 +1,456 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin-top: 70px;
+}
+
+/* Navbar personalizado */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .navbar-brand img.logo {
+    height: 80px; /* Ajusta según necesidad */
+}
+
+/* Encabezado */
+header {
+    color: #fff;
+    padding: 60px 0; /* Ajuste del padding superior e inferior */
+    position: relative;
+    margin-bottom: 20px; /* Espacio hacia abajo */
+}
+
+/* Video de fondo */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Contenido del encabezado */
+#inicio .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 20px; /* Margen superior */
+    padding-bottom: 20px; /* Margen inferior */
+}
+
+/* Ajustes de estilo del encabezado */
+header h1 {
+    font-weight: 600;
+    font-size: 2rem; /* Tamaño de letra más pequeño */
+    animation-duration: 2s;
+}
+
+header p {
+    font-size: 1rem; /* Tamaño de letra más pequeño */
+    font-weight: 300;
+    opacity: 0.9;
+    animation-duration: 2.5s;
+}
+
+header .btn-primary {
+    font-size: 1rem;
+    padding: 10px 20px;
+    animation-duration: 3s;
+    background: linear-gradient(45deg, #007bff, #0056b3); /* Degradado */
+    border: none;
+    margin-left: 20px; /* Mover el botón un poco a la derecha */
+}
+
+/* Mejora de la imagen */
+header img.enlarged-image {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation-duration: 3.5s;
+    width: 100%; /* Ampliar la imagen */
+    border-radius: 15px;
+}
+
+/* Carrusel de estadísticas */
+.stats-carousel {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+    white-space: nowrap;
+    animation: scrollStats 15s linear infinite;
+}
+
+@keyframes scrollStats {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.stats-carousel .stat {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.stats-carousel .stat i {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.container.position-relative {
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilos de la tarjeta para programas y entrenadores */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Ajustar según necesidad para que se vean las caras */
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+/* Estilos para iconos sociales */
+.social-icons a {
+    color: #6c757d;
+    margin: 0 10px;
+    font-size: 1.25rem; /* Ajusta el tamaño según necesidad */
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/* Botones con bordes sutiles y efectos */
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilos para flip cards */
+.card-flip {
+    background-color: transparent;
+    width: 100%;
+    perspective: 1000px;
+    margin-bottom: 40px; /* Margen inferior adicional */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajuste de altura */
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Sombra para las tarjetas */
+    border-radius: 15px; /* Borde redondeado */
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    padding: 20px; /* Añade espacio alrededor del contenido */
+}
+
+.flip-card-front {
+    background-color: #fff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back {
+    background: linear-gradient(to bottom, #6C757D, #ffffff); /* Degradado oscuro */
+    color: #000000; /* Texto claro para mejor legibilidad */
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate {
+    transform: rotateY(180deg);
+}
+
+/* Ajuste del botón de giro */
+.flip-card-back button.flip-card-btn, .flip-card-front button.flip-card-btn {
+    background-color: #ffffff;
+    color: #1a1a1a; /* Color del botón para mejor contraste */
+    border: 2px solid #1a1a1a;
+    margin-top: 10px;
+    padding: 10px 20px; /* Añade relleno para mayor visibilidad */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    flex: 1; /* Hacer que los botones crezcan para ocupar el espacio */
+    margin: 0 5px; /* Espacio entre botones */
+}
+
+.flip-card-back button.flip-card-btn:hover, .flip-card-front button.flip-card-btn:hover {
+    background-color: #d4d4d4;
+    color: #1a1a1a;
+}
+
+.card-body ul {
+    text-align: left;
+    padding-left: 0;
+}
+
+.card-body ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card-body ul li i {
+    margin-right: 10px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+footer a {
+    color: #9faab7;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+.footer-social-icons {
+    margin-top: 1rem;
+}
+
+/* Respuestas a media queries para mejor adaptabilidad */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 0;
+    }
+
+    .stats-carousel {
+        display: block;
+    }
+
+    .stats-carousel .stat {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    header p {
+        font-size: 0.875rem;
+    }
+
+    header .btn-primary {
+        font-size: 0.875rem;
+    }
+
+    header img.enlarged-image {
+        height: auto;
+    }
+
+    .card img {
+        height: auto; /* Ajuste para dispositivos móviles */
+    }
+
+    .flip-card-inner {
+        height: 500px; /* Ajuste de altura para dispositivos móviles */
+    }
+
+    .programa-item {
+        width: 100%; /* Asegura que las tarjetas ocupen todo el ancho en pantallas pequeñas */
+    }
+
+    .testimonial-card {
+        max-width: 100%; /* Permite que las tarjetas ocupen todo el ancho en dispositivos móviles */
+        margin: 10px; /* Añade un poco de margen alrededor de las tarjetas */
+    }
+
+    .testimonial-img {
+        width: 50px; /* Tamaño de imagen más pequeño para móviles */
+        height: 50px; /* Tamaño de imagen más pequeño para móviles */
+    }
+
+    .preguntas .accordion .card-header h2 button {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Ajustes adicionales para responsividad y legibilidad */
+.container {
+    max-width: 1140px; /* Asegura un máximo contenedor para mejor visualización */
+}
+
+/* Asegurando que las tarjetas flip no se solapen */
+#programas {
+    padding-bottom: 80px; /* Espacio adicional para evitar solapamientos */
+}
+
+.programas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+.programa-item {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para los botones en las tarjetas flip */
+.flip-card-back .d-flex {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.flip-card-back button {
+    margin: 5px;
+}
+
+/* Estilos de la sección de testimonios */
+#testimonios {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto claro */
+}
+
+#testimonios h2 {
+    color: #fff; /* Título claro */
+}
+
+.testimonial-card {
+    background-color: #444; /* Fondo de la tarjeta */
+    color: #fff; /* Texto claro */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra */
+    margin: 0 15px; /* Margen entre tarjetas */
+    max-width: 600px; /* Establece un ancho máximo para las tarjetas */
+    margin: 0 auto 20px auto; /* Centra las tarjetas y añade espacio inferior */
+}
+
+.testimonial-card .card-body {
+    display: flex;
+    align-items: center; /* Alinear contenido en el centro verticalmente */
+    padding: 20px; /* Espacio interior */
+}
+
+.testimonial-img {
+    width: 30px; /* Tamaño de la imagen */
+    height: 30px; /* Tamaño de la imagen */
+    border-radius: 50%; /* Forma circular */
+    object-fit: cover; /* Ajuste de la imagen */
+    margin-right: 15px; /* Espacio a la derecha de la imagen */
+}
+
+.card-title {
+    display: flex;
+    align-items: center; /* Alinear texto y bandera en el centro verticalmente */
+}
+
+.card-title i {
+    margin-left: 5px; /* Espacio entre el texto y la bandera */
+    font-size: 1rem; /* Tamaño de la bandera */
+}
+
+/* Estilos de la sección de preguntas */
+.preguntas .card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.preguntas .card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 10px 10px 0 0;
+    padding: 0.75rem 1.25rem;
+}
+
+.preguntas .btn-link {
+    font-size: 1.1rem;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0;
+}
+
+.preguntas .btn-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.preguntas .card-body {
+    background-color: #fff;
+    padding: 1.25rem;
+    border-radius: 0 0 10px 10px;
+}
+
+.preguntas .accordion .card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.preguntas .accordion .card-header h2 button {
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 1rem;
+}

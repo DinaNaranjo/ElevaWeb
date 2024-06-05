@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleva tu Ajedrez</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo de la Academia" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#programas">Programas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#entrenadores">Entrenadores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#tarifas">Tarifas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="text-white text-center py-5" id="inicio">
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="img/8327786-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-lg-start text-center">
+                <h1 class="display-4 animate__animated animate__fadeInDown">Eleva Tu Ajedrez</h1>
+                <p class="lead animate__animated animate__fadeInUp">Entrenamiento sistemático y tecnología avanzada para potenciar tu rendimiento ajedrecístico.</p>
+                <div class="row stats-grid animate__animated animate__fadeInUp">
+                    <div class="col-6 stat">
+                        <i class="fas fa-chart-line fa-2x"></i>
+                        <p>Incremento del 30% en Elo promedio</p>
+                    </div>
+                    <div class="col-6 stat">
+                        <i class="fas fa-robot fa-2x"></i>
+                        <p>100% análisis automático de partidas</p>
+                    </div>
+                    <div class="col-6 stat">
+                        <i class="fas fa-laptop-code fa-2x"></i>
+                        <p>Plataforma tecnológica avanzada</p>
+                    </div>
+                    <div class="col-6 stat">
+                        <i class="fas fa-bullseye fa-2x"></i>
+                        <p>Curvas de crecimiento personalizadas</p>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" onclick="Calendly.showPopupWidget('https://calendly.com/jmecheverrig-clasesdeajedrez/clase-personalizada-ajedrez');return false;" class="btn btn-primary animate__animated animate__fadeInUp mt-3">Agenda tu cita gratis</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="img/imagen.png" alt="Ajedrez" class="img-fluid animate__animated animate__fadeInRight rounded enlarged-image">
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<section id="testimonios" class="py-5 bg-dark text-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Testimonios</h2>
+        <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="card testimonial-card bg-secondary text-light">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="https://source.unsplash.com/30x30/?portrait" alt="Juan Pérez" class="testimonial-img rounded-circle me-3">
+                                <div>
+                                    <p class="card-text">"La academia ha mejorado significativamente mi nivel de juego. Los entrenadores son muy profesionales."</p>
+                                    <h5 class="card-title mb-0">Juan Pérez <i class="fas fa-flag-mx"></i></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card testimonial-card bg-secondary text-light">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="https://source.unsplash.com/30x30/?woman" alt="María Gómez" class="testimonial-img rounded-circle me-3">
+                                <div>
+                                    <p class="card-text">"Excelente metodología y un ambiente muy amigable para aprender y crecer en ajedrez."</p>
+                                    <h5 class="card-title mb-0">María Gómez <i class="fas fa-flag-es"></i></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card testimonial-card bg-secondary text-light">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="https://source.unsplash.com/30x30/?man" alt="Carlos López" class="testimonial-img rounded-circle me-3">
+                                <div>
+                                    <p class="card-text">"Las sesiones son muy instructivas y me han ayudado a mejorar mi estrategia."</p>
+                                    <h5 class="card-title mb-0">Carlos López <i class="fas fa-flag-ar"></i></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card testimonial-card bg-secondary text-light">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="https://source.unsplash.com/30x30/?girl" alt="Ana Martínez" class="testimonial-img rounded-circle me-3">
+                                <div>
+                                    <p class="card-text">"He conocido a personas maravillosas y he aprendido mucho. Recomiendo la academia a todos."</p>
+                                    <h5 class="card-title mb-0">Ana Martínez <i class="fas fa-flag-cl"></i></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card testimonial-card bg-secondary text-light">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="https://source.unsplash.com/30x30/?smile" alt="Luis Torres" class="testimonial-img rounded-circle me-3">
+                                <div>
+                                    <p class="card-text">"Un lugar excelente para mejorar tus habilidades de ajedrez. Ambiente muy amigable y profesional."</p>
+                                    <h5 class="card-title mb-0">Luis Torres <i class="fas fa-flag-us"></i></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card testimonial-card bg-secondary text-light">
+                            <div class="card-body d-flex align-items-center">
+                                <img src="https://source.unsplash.com/30x30/?elderly" alt="Carmen Díaz" class="testimonial-img rounded-circle me-3">
+                                <div>
+                                    <p class="card-text">"Muy recomendable, los entrenadores son muy capacitados y las clases son muy amenas."</p>
+                                    <h5 class="card-title mb-0">Carmen Díaz <i class="fas fa-flag-co"></i></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agregar más testimonios aquí -->
+            </div>
+            <a class="carousel-control-prev" href="#testimoniosCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#testimoniosCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de programas -->
+<section id="programas" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Nuestros Programas</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card-flip">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card">
+                                <img src="img/ico11.png" class="card-img-top" alt="Ajedrez Formativo">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ajedrez Formativo</h5>
+                                    <p class="card-text">Diviértete, socializa y mejora tu ajedrez.</p>
+                                    <button class="btn btn-outline-primary flip-card-btn">Descubre más</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ajedrez Formativo</h5>
+                                    <p class="card-text">Mejora tu juego en un ambiente social y divertido.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-primary"></i> Clases grupales</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Torneos internos</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Actividades sociales</li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-outline-primary flip-card-btn">
+                                            <i class="fas fa-arrow-left"></i> Volver
+                                        </button>
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fab fa-whatsapp"></i> Más Información
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card-flip">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card">
+                                <img src="img/ico22.png" class="card-img-top" alt="Ajedrez de Rendimiento">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ajedrez de Rendimiento</h5>
+                                    <p class="card-text">Entrena sistemáticamente y compite al máximo nivel.</p>
+                                    <button class="btn btn-outline-primary flip-card-btn">Descubre más</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ajedrez de Rendimiento</h5>
+                                    <p class="card-text">Para jugadores avanzados que buscan competir y mejorar su rendimiento.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-primary"></i> Análisis de partidas</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Preparación táctica</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Participación en torneos</li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-outline-primary flip-card-btn">
+                                            <i class="fas fa-arrow-left"></i> Volver
+                                        </button>
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fab fa-whatsapp"></i> Más Información
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card-flip">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card">
+                                <img src="img/ico33.png" class="card-img-top" alt="Ajedrez para Discapacidad">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ajedrez para Discapacidad</h5>
+                                    <p class="card-text">Ajedrez sin límites, aprende, diviértete y compite.</p>
+                                    <button class="btn btn-outline-primary flip-card-btn">Descubre más</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ajedrez para Discapacidad</h5>
+                                    <p class="card-text">Entrenamiento adaptado para personas con discapacidades en un ambiente accesible.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-primary"></i> Accesibilidad completa</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Clases adaptadas</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Torneos inclusivos</li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-outline-primary flip-card-btn">
+                                            <i class="fas fa-arrow-left"></i> Volver
+                                        </button>
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fab fa-whatsapp"></i> Más Información
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card-flip">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card">
+                                <img src="img/ico44.png" class="card-img-top" alt="Ajedrez para Empresas">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ajedrez para Empresas</h5>
+                                    <p class="card-text">Mejora el rendimiento y cohesión de tu equipo.</p>
+                                    <button class="btn btn-outline-primary flip-card-btn">Descubre más</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ajedrez para Empresas</h5>
+                                    <p class="card-text">Mejora las habilidades estratégicas y la cohesión del equipo a través del ajedrez.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-primary"></i> Talleres de equipo</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Coaching empresarial</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Estrategias de liderazgo</li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-outline-primary flip-card-btn">
+                                            <i class="fas fa-arrow-left"></i> Volver
+                                        </button>
+                                        <button class="btn btn-outline-primary">
+                                            <i class="fab fa-whatsapp"></i> Más Información
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="entrenadores" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Nuestros Entrenadores</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="img/fotof.png" class="card-img-top rounded-top" alt="FM Faiber Lotero">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">FM Faiber Lotero</h5>
+                        <p class="card-text">Entrenador Olimpico - FT</p>
+                        <p class="text-muted">Certificaciones y Logros:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-trophy"></i> Campeón Nacional</li>
+                            <li><i class="fas fa-certificate"></i> Certificado FIDE</li>
+                            <li><i class="fas fa-award"></i> Medallista Olímpico</li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f me-2"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fab fa-twitter me-2"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fab fa-linkedin me-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="img/fotow.png" class="card-img-top rounded-top" alt="IM Wilfredo Sariego">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">IM Wilfredo Sariego</h5>
+                        <p class="card-text">Entrenador Olimpico - FT</p>
+                        <p class="text-muted">Certificaciones y Logros:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-trophy"></i> Campeón Continental</li>
+                            <li><i class="fas fa-certificate"></i> Certificado FIDE</li>
+                            <li><i class="fas fa-award"></i> Medallista Panamericano</li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f me-2"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fab fa-twitter me-2"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fab fa-linkedin me-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="img/fotoj.png" class="card-img-top rounded-top" alt="AIM Jose Miguel Echeverri">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">AIM Jose Miguel Echeverri</h5>
+                        <p class="card-text">Entrenador FIDE - FI</p>
+                        <p class="text-muted">Certificaciones y Logros:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-trophy"></i> Campeón Nacional</li>
+                            <li><i class="fas fa-certificate"></i> Certificado FIDE</li>
+                            <li><i class="fas fa-award"></i> Medallista Olímpico</li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f me-2"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fab fa-twitter me-2"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fab fa-linkedin me-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 shadow-lg border-0">
+                    <img src="img/fotom.png" class="card-img-top rounded-top" alt="Jhon Sebastian Hernandez">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Jhon Sebastian Hernandez</h5>
+                        <p class="card-text">Psicologo</p>
+                        <p class="text-muted">Certificaciones y Logros:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-trophy"></i> Psicólogo Deportivo</li>
+                            <li><i class="fas fa-certificate"></i> Certificado en Psicología del Deporte</li>
+                        </ul>
+                        <div class="social-icons">
+                            <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f me-2"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fab fa-twitter me-2"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fab fa-linkedin me-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tarifas" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Nuestras Tarifas</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Plan Mensual</h5>
+                        <p class="card-text display-6">$100/mes</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary"></i> 12 sesiones grupales (2 horas)</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> 3 sesiones semanales</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Plan de entrenamiento</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Seguimiento</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Asesorías permanentes</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Informes</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary w-100 mt-3">Elegir plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Plan Semestral</h5>
+                        <p class="card-text display-6">$550/semestre</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary"></i> 72 sesiones grupales (2 horas)</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> 3 sesiones semanales</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Plan de entrenamiento</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Seguimiento</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Asesorías permanentes</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Informes</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary w-100 mt-3">Elegir plan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">Plan Anual</h5>
+                        <p class="card-text display-6">$1100/año</p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-primary"></i> 144 sesiones grupales (2 horas)</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> 3 sesiones semanales</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Plan de entrenamiento</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Seguimiento</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Asesorías permanentes</li>
+                            <li><i class="fas fa-check-circle text-primary"></i> Informes</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary w-100 mt-3">Elegir plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contacto" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5"><i class="fas fa-envelope-open-text"></i> Contacto</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label"><i class="fas fa-user"></i> Nombre</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label"><i class="fas fa-envelope"></i> Correo Electrónico</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label"><i class="fas fa-comment-dots"></i> Mensaje</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar</button>
+        </form>
+    </div>
+</section>
+
+<section class="preguntas">
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Debo pagar matricula y mensualidad?
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        Sí, la matricula se paga una sola vez y se realiza antes de comenzar el proceso. En cuanto a la mensualidad, debes realizarla antes de comenzar el mes, también puedes pagar por semestre o por año y obtener nuestros descuentos.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿Qué incluye la matricula?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        Con la matricula estarás oficialmente inscrito en nuestra comunidad, tendrás una sesión de inducción en la cual aprenderás a manejar todas las herramientas necesarias para tu proceso en Eleva Tu Ajedrez y además recibirás dos ebooks escritos por nuestros entrenadores.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Cuáles son los medios de pago?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        Puedes pagar con cualquier tarjeta de crédito o por PayPal.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ¿Si me inscribo a mitad de mes debo pagar el mes completo?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        No. Aunque lo ideal es comenzar el primero de cada mes, puedes realizar un pago proporcional al día en el que comiences el proceso.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            ¿Qué sucede si no puedo asistir a una o más sesiones?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        Es muy importante asistir a todas las sesiones si deseas elevar al máximo tu ajedrez, pero no es obligación. Depende de ti.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSix">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            ¿Cuántos niveles tiene la academia?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        Contamos con 8 niveles que van desde iniciación 1 donde estarán las personas que aprenden desde 0, hasta el nivel élite para deportistas de más de 2500 de Elo en lichess.org (deportistas de muy alto nivel y maestros).
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSeven">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            ¿Cómo se cuál es mi nivel actual?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        En la primera sesión gratis, medimos el nivel del deportista por medio del Elo que posea en la plataforma lichess.org. Si aún no tienes una cuenta en esta plataforma, podemos ayudarte a crear una y asesorarte para puedas comenzar a jugar y probar tu nivel. En caso de que seas un deportista totalmente nuevo, comenzarás en el nivel 1.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingEight">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            ¿Puedo mejorar en el ajedrez si tengo más de 30 años?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        En el siguiente artículo podrás profundizar sobre el tema: <a href="https://octopuschess.com/articulo/448/el-motor-tactico-y-su-relacion-con-la-edad-del-ajedrecista">https://octopuschess.com/articulo/448/el-motor-tactico-y-su-relacion-con-la-edad-del-ajedrecista</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingNine">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            ¿Cómo se si tengo talento para el ajedrez?
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                    <div class="card-body">
+                        En el siguiente artículo podrás profundizar sobre el tema: <a href="https://octopuschess.com/articulo/566/el-talento-en-ajedrez-parte-i">https://octopuschess.com/articulo/566/el-talento-en-ajedrez-parte-i</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Eleva tu Ajedrez</h5>
+                <p>Síguenos en nuestras redes sociales y eleva tu ajedrez con nosotros.</p>
+                <div class="footer-social-icons">
+                    <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f me-2"></i></a>
+                    <a href="#" class="text-decoration-none"><i class="fab fa-twitter me-2"></i></a>
+                    <a href="#" class="text-decoration-none"><i class="fab fa-instagram me-2"></i></a>
+                    <a href="#" class="text-decoration-none"><i class="fab fa-linkedin-in me-2"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none text-white">Acerca de nosotros</a></li>
+                    <li><a href="#" class="text-decoration-none text-white">Nuestra metodología</a></li>
+                    <li><a href="#" class="text-decoration-none text-white">Soporte</a></li>
+                    <li><a href="#" class="text-decoration-none text-white">Precios</a></li>
+                    <li><a href="#" class="text-decoration-none text-white">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Suscríbete</h5>
+                <form class="d-flex">
+                    <input type="email" class="form-control me-2" placeholder="Tu correo electrónico">
+                    <button class="btn btn-primary" type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <p class="mt-4 mb-0">© 2024 copyright Eleva tu Ajedrez</p>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(document).ready(function() {
+    var hash = window.location.hash;
+    if (hash) {
+        $('.nav-link[href="' + hash + '"]').tab('show');
+    }
+
+    $('a.nav-link').on('click', function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+    }).on('shown.bs.tab', function (e) {
+        window.location.hash = e.target.hash;
+    });
+
+    $('.flip-card-btn').on('click', function() {
+        var cardInner = $(this).closest('.flip-card-inner');
+        cardInner.toggleClass('rotate');
+    });
+});
+</script>
+
+</body>
+</html>
