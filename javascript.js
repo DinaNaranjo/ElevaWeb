@@ -1,18 +1,18 @@
-$(document).ready(function() {
-    var hash = window.location.hash;
-    if (hash) {
-        $('.nav-link[href="' + hash + '"]').tab('show');
-    }
-
-    $('a.nav-link').on('click', function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-    }).on('shown.bs.tab', function (e) {
-        window.location.hash = e.target.hash;
-    });
-
-    $('.flip-card-btn').on('click', function() {
-        var cardInner = $(this).closest('.flip-card').find('.flip-card-inner');
-        cardInner.toggleClass('rotate');
+$(document).ready(function(){
+    $('.testimonial-carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 });
