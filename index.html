@@ -9,6 +9,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
@@ -146,62 +148,102 @@
     </div>
 </section>
 
-<section id="testimonios" class="py-5 bg-dark text-light">
+<section id="testimonios" class="py-5 bg-light text-dark">
     <div class="container">
         <h2 class="text-center mb-5">Testimonios</h2>
-        <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center">
-                        <div class="card testimonial-card bg-secondary text-light p-4 mb-4">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-4 text-center">
-                                    <img id="testimonio-img-1" src="img/fotof.png" alt="Juan Pérez" class="testimonial-img rounded-circle">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <p class="card-text">"La academia ha mejorado significativamente mi nivel de juego. Los entrenadores son muy profesionales."</p>
-                                        <h5 class="card-title mb-0">Juan Pérez</h5>
-                                        <p class="card-subtitle mb-0">FM, Ingeniero <span class="ms-2"><img id="testimonio-bandera-1" src="img/colombia.png" alt="México"></span></p>
-                                        <p class="card-subtitle mb-0">ELO: 2300</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="card testimonial-card p-4 mb-4">
+                    <img src="img/fotof.png" alt="Juan Pérez" class="testimonial-img">
+                    <div class="card-body">
+                        <p class="card-text">"La academia ha mejorado significativamente mi nivel de juego. Los entrenadores son muy profesionales."</p>
+                        <h5 class="card-title mb-0">Juan Pérez</h5>
+                        <p class="card-subtitle mb-0">FM, Ingeniero <img src="img/colombia.png" alt="Colombia" class="ms-2"></p>
+                        <p class="card-subtitle mb-0">ELO: 2300</p>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <div class="card testimonial-card bg-secondary text-light p-4 mb-4">
-                            <div class="row g-0 align-items-center">
-                                <div class="col-4 text-center">
-                                    <img id="testimonio-img-2" src="ruta/a/la/imagen.jpg" alt="María Gómez" class="testimonial-img rounded-circle">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <p class="card-text">"Excelente metodología y un ambiente muy amigable para aprender y crecer en ajedrez."</p>
-                                        <h5 class="card-title mb-0">María Gómez</h5>
-                                        <p class="card-subtitle mb-0">GM, Profesora <span class="ms-2"><img id="testimonio-bandera-2" src="ruta/a/la/bandera.png" alt="España"></span></p>
-                                        <p class="card-subtitle mb-0">ELO: 2500</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Agrega más testimonios aquí -->
             </div>
-            <a class="carousel-control-prev" href="#testimoniosCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#testimoniosCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </a>
+            <div class="item">
+                <div class="card testimonial-card p-4 mb-4">
+                    <img src="img/fotoa.png" alt="María Gómez" class="testimonial-img">
+                    <div class="card-body">
+                        <p class="card-text">"Excelente metodología y un ambiente muy amigable para aprender y crecer en ajedrez."</p>
+                        <h5 class="card-title mb-0">María Gómez</h5>
+                        <p class="card-subtitle mb-0">GM, Profesora <img src="img/espana.png" alt="España" class="ms-2"></p>
+                        <p class="card-subtitle mb-0">ELO: 2500</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card testimonial-card p-4 mb-4">
+                    <img src="img/fotob.png" alt="Carlos López" class="testimonial-img">
+                    <div class="card-body">
+                        <p class="card-text">"Las clases son muy dinámicas y he mejorado mucho en poco tiempo."</p>
+                        <h5 class="card-title mb-0">Carlos López</h5>
+                        <p class="card-subtitle mb-0">NM, Estudiante <img src="img/mexico.png" alt="México" class="ms-2"></p>
+                        <p class="card-subtitle mb-0">ELO: 2200</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card testimonial-card p-4 mb-4">
+                    <img src="img/fotoc.png" alt="Ana Martínez" class="testimonial-img">
+                    <div class="card-body">
+                        <p class="card-text">"Recomiendo esta academia a todos los que quieran llevar su ajedrez al siguiente nivel."</p>
+                        <h5 class="card-title mb-0">Ana Martínez</h5>
+                        <p class="card-subtitle mb-0">WFM, Abogada <img src="img/argentina.png" alt="Argentina" class="ms-2"></p>
+                        <p class="card-subtitle mb-0">ELO: 2400</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card testimonial-card p-4 mb-4">
+                    <img src="img/fotod.png" alt="Pedro González" class="testimonial-img">
+                    <div class="card-body">
+                        <p class="card-text">"Los entrenadores son muy atentos y siempre están disponibles para resolver dudas."</p>
+                        <h5 class="card-title mb-0">Pedro González</h5>
+                        <p class="card-subtitle mb-0">IM, Ingeniero <img src="img/uruguay.png" alt="Uruguay" class="ms-2"></p>
+                        <p class="card-subtitle mb-0">ELO: 2300</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card testimonial-card p-4 mb-4">
+                    <img src="img/fotoe.png" alt="Laura Hernández" class="testimonial-img">
+                    <div class="card-body">
+                        <p class="card-text">"Las sesiones de entrenamiento son muy completas y me han ayudado a mejorar mi estrategia."</p>
+                        <h5 class="card-title mb-0">Laura Hernández</h5>
+                        <p class="card-subtitle mb-0">WIM, Estudiante <img src="img/venezuela.png" alt="Venezuela" class="ms-2"></p>
+                        <p class="card-subtitle mb-0">ELO: 2200</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card testimonial-card p-4 mb-4">
+                    <img src="img/fotog.png" alt="José Ramírez" class="testimonial-img">
+                    <div class="card-body">
+                        <p class="card-text">"He mejorado mi juego y he conocido a muchos amigos en la academia."</p>
+                        <h5 class="card-title mb-0">José Ramírez</h5>
+                        <p class="card-subtitle mb-0">FM, Doctor <img src="img/peru.png" alt="Perú" class="ms-2"></p>
+                        <p class="card-subtitle mb-0">ELO: 2400</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="card testimonial-card p-4 mb-4">
+                    <img src="img/fotoh.png" alt="Sofía Torres" class="testimonial-img">
+                    <div class="card-body">
+                        <p class="card-text">"Las clases online son muy prácticas y he aprendido mucho desde casa."</p>
+                        <h5 class="card-title mb-0">Sofía Torres</h5>
+                        <p class="card-subtitle mb-0">WFM, Desarrolladora <img src="img/chile.png" alt="Chile" class="ms-2"></p>
+                        <p class="card-subtitle mb-0">ELO: 2300</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
 
 <!-- Sección de programas -->
 <section id="programas" class="py-5">
@@ -703,25 +745,30 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script>
 $(document).ready(function() {
-    var hash = window.location.hash;
-    if (hash) {
-        $('.nav-link[href="' + hash + '"]').tab('show');
-    }
-
-    $('a.nav-link').on('click', function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-    }).on('shown.bs.tab', function (e) {
-        window.location.hash = e.target.hash;
-    });
-
-    $('.flip-card-btn').on('click', function() {
-        var cardInner = $(this).closest('.flip-card-inner');
-        cardInner.toggleClass('rotate');
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
     });
 });
+
 </script>
 
 </body>

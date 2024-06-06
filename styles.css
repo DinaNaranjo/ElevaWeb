@@ -363,45 +363,52 @@ footer a:hover {
 
 /* Estilos de la sección de testimonios */
 #testimonios {
-    background-color: #333; /* Fondo oscuro */
-    color: #fff; /* Texto claro */
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #333; /* Texto oscuro */
     padding: 60px 0; /* Espaciado arriba y abajo */
 }
 
 #testimonios h2 {
-    color: #fff; /* Título claro */
+    color: #333; /* Título oscuro */
     font-size: 2rem; /* Tamaño del título */
     margin-bottom: 30px; /* Espaciado debajo del título */
 }
 
 .testimonial-card {
-    background-color: #444; /* Fondo de la tarjeta */
-    color: #fff; /* Texto claro */
+    background-color: #fff; /* Fondo de la tarjeta */
+    color: #333; /* Texto oscuro */
     border: none; /* Sin borde */
     border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra */
     max-width: 600px; /* Ancho máximo para las tarjetas */
     width: 100%; /* Ancho completo */
     margin: 0 auto 20px auto; /* Centra las tarjetas y añade espacio inferior */
     padding: 20px; /* Espaciado interno */
+    display: flex; /* Usar flexbox para asegurar la misma altura */
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos horizontalmente */
 }
 
 .testimonial-img {
-    width: 150px !important; /* Tamaño más pequeño de la imagen */
-    height: 150px !important; /* Tamaño más pequeño de la imagen */
-    border-radius: 50%; /* Forma circular */
+    width: 100%; /* Ancho completo de la tarjeta */
+    height: auto; /* Ajuste automático de la altura */
+    border-radius: 10px; /* Bordes redondeados */
     object-fit: cover; /* Ajuste de la imagen */
     margin-bottom: 10px; /* Espacio debajo de la imagen */
 }
 
-
 .card-body {
-    padding-left: 10px; /* Espaciado a la izquierda */
+    padding: 20px; /* Espaciado interno */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el contenido horizontalmente */
+    text-align: center; /* Alinear el texto al centro */
 }
 
 .card-text {
     font-size: 0.9rem; /* Tamaño del texto */
     margin-bottom: 10px; /* Espaciado debajo del texto */
+    flex-grow: 1; /* Permitir que el texto crezca para llenar el espacio */
 }
 
 .card-title {
@@ -412,21 +419,21 @@ footer a:hover {
 
 .card-subtitle {
     font-size: 0.8rem; /* Tamaño del subtítulo */
-    color: #ccc; /* Color del subtítulo */
+    color: #666; /* Color del subtítulo */
     margin-bottom: 5px; /* Espaciado debajo del subtítulo */
+    display: flex;
+    align-items: center; /* Alinear verticalmente los elementos */
 }
 
 .card-subtitle img {
-    width: 20px !important; /* Tamaño más pequeño de la bandera */
-    height: 20px !important; /* Tamaño más pequeño de la bandera */
+    width: 20px; /* Tamaño más pequeño de la bandera */
+    height: 20px; /* Tamaño más pequeño de la bandera */
     margin-left: 5px; /* Espacio entre el texto y la bandera */
-    vertical-align: middle; /* Alinear verticalmente */
 }
-
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: #fff; /* Color del ícono */
+    background-color: #333; /* Color del ícono */
     border-radius: 50%; /* Forma circular */
     padding: 10px; /* Espacio interior */
 }
@@ -436,8 +443,8 @@ footer a:hover {
         padding: 10px; /* Reducir el espaciado interno en pantallas pequeñas */
     }
     .testimonial-img {
-        width: 110px !important; /* Reducir tamaño de la imagen en pantallas pequeñas */
-        height: 110px !important; /* Reducir tamaño de la imagen en pantallas pequeñas */
+        width: 100%; /* Ancho completo de la tarjeta */
+        height: auto; /* Ajuste automático de la altura */
     }
     .card-title {
         font-size: 0.9rem; /* Reducir tamaño del título en pantallas pequeñas */
@@ -449,6 +456,8 @@ footer a:hover {
         font-size: 0.75rem; /* Reducir tamaño del subtítulo en pantallas pequeñas */
     }
 }
+
+
 
 /* Estilos de la sección de preguntas */
 .preguntas .card {
