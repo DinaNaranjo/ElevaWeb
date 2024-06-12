@@ -383,7 +383,7 @@ footer a:hover {
     max-width: 600px; /* Ancho máximo para las tarjetas */
     width: 100%; /* Ancho completo */
     margin: 0 auto 20px auto; /* Centra las tarjetas y añade espacio inferior */
-    padding: 20px; /* Espaciado interno */
+    padding: 0; /* Eliminar espaciado interno adicional */
     display: flex; /* Usar flexbox para asegurar la misma altura */
     flex-direction: column;
     align-items: center; /* Centrar los elementos horizontalmente */
@@ -391,10 +391,10 @@ footer a:hover {
 
 .testimonial-img {
     width: 100%; /* Ancho completo de la tarjeta */
-    height: auto; /* Ajuste automático de la altura */
-    border-radius: 10px; /* Bordes redondeados */
+    height: 200px; /* Altura fija para mantener proporción */
+    border-top-left-radius: 10px; /* Bordes redondeados en la parte superior */
+    border-top-right-radius: 10px; /* Bordes redondeados en la parte superior */
     object-fit: cover; /* Ajuste de la imagen */
-    margin-bottom: 10px; /* Espacio debajo de la imagen */
 }
 
 .card-body {
@@ -421,14 +421,17 @@ footer a:hover {
     font-size: 0.8rem; /* Tamaño del subtítulo */
     color: #666; /* Color del subtítulo */
     margin-bottom: 5px; /* Espaciado debajo del subtítulo */
+    width: 24px;  /* Ajustar el tamaño según sea necesario */
+    height: auto; /* Mantener la proporción de la imagen */
     display: flex;
     align-items: center; /* Alinear verticalmente los elementos */
 }
 
 .card-subtitle img {
-    width: 20px; /* Tamaño más pequeño de la bandera */
-    height: 20px; /* Tamaño más pequeño de la bandera */
+    width: 16px; /* Tamaño más pequeño de la bandera */
+    height: auto; /* Ajuste automático de la altura */
     margin-left: 5px; /* Espacio entre el texto y la bandera */
+    vertical-align: middle; /* Alinear verticalmente */
 }
 
 .carousel-control-prev-icon,
@@ -444,7 +447,7 @@ footer a:hover {
     }
     .testimonial-img {
         width: 100%; /* Ancho completo de la tarjeta */
-        height: auto; /* Ajuste automático de la altura */
+        height: 150px; /* Ajuste automático de la altura */
     }
     .card-title {
         font-size: 0.9rem; /* Reducir tamaño del título en pantallas pequeñas */
@@ -454,6 +457,10 @@ footer a:hover {
     }
     .card-subtitle {
         font-size: 0.75rem; /* Reducir tamaño del subtítulo en pantallas pequeñas */
+    }
+    .card-subtitle img {
+        width: 14px; /* Tamaño más pequeño de la bandera */
+        height: auto; /* Ajuste automático de la altura */
     }
 }
 
